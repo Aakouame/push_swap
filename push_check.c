@@ -118,16 +118,16 @@ void    ft_put_top_b(t_info **a, int i, int size)
         ft_swap(a, "sb");
     else if ((size - i) <= (size / 2)) // kant size - i <= size/2
     {
-        while ((i) != 0)
-        {
-            ft_rotate(a, "rb");
-            i--;
-        }
-    }
-    else
-        while (i < size)
+        while ((i) < size)
         {
             ft_rev_rotate(a, "rrb");
             i++;
+        }
+    }
+    else
+        while (i != 0)
+        {
+            ft_rotate(a, "rb");
+            i--;
         }
 }

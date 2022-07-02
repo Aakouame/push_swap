@@ -45,3 +45,26 @@ void    ft_sort_0(t_info  **head)
     if (((*head)->num) > ((*head)->Next->num))
         ft_swap(head, "sa");
 }
+
+void    ft_delete_indix(t_info **a, int indix)
+{
+    int t;
+
+    if (indix > ft_size(*a))
+    {
+        ft_putendl_fd("error  delete indix !", 1);
+        return ;
+    }
+    t = indix;
+    while (indix != 0)
+    {
+        ft_rotate(a, "");
+        indix--;
+    }
+    ft_delete_t(a);
+    while (t != 0)
+    {
+        ft_rev_rotate(a, "");
+        t--;
+    }
+}

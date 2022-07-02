@@ -41,6 +41,7 @@ void    ft_put_top_b(t_info **a, int i, int size);
 int ft_size(t_info *a);
 int ft_biggest(t_info *head);
 void    ft_put_top_tmp(t_info **a, int i, int size);
+void    ft_delete_indix(t_info **a, int indix);
 
 int ft_val_indice(t_info *tmp, int indice);
 

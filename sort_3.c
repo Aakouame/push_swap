@@ -53,7 +53,7 @@ void    ft_sorting (t_info **tmp)
     head = NULL;
     while((*tmp)->Next != NULL)
     {
-        min = ft_biggest(*tmp);
+        min = ft_smallest(*tmp);
         size = ft_size(*tmp);
         ft_put_top_tmp(tmp, ft_indice(*tmp, min), size);
         ft_push(&head, tmp, "");

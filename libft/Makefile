@@ -51,7 +51,7 @@ OBJS = $(SRCS:.c=.o)
 all:$(NAME)
 
 %.o :%.c libft.h
-	$(CC) $(CFLAGS) -c -o $@ $< -I libft.h
+	$(CC) $(CFLAGS) -c -o $@ $< -I libft.h 
 
 $(NAME):$(OBJS)
 	ar -rc $(NAME) $(OBJS)

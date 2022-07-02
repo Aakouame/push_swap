@@ -22,8 +22,8 @@ int main (int argc, char ** argv)
                 ft_sort_2(&a, &b, size);
             else if (size > 5)
                 ft_sort_4(&a, &b);
-            write (1, "\n\n", 2);
-            ft_display(a ,"a");
+            // write (1, "\n\n", 2);
+            // ft_display(a ,"a");
         }
         else
             ft_putstr_fd("error ", 1);

@@ -34,7 +34,7 @@ $(LIBFT): ${PATH_LIBFT}
 	make -C ${PATH_LIBFT}
 
 $(NAME): $(OBJS) $(LIBFT)
-	$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME) 
 
 clean:
 	rm -f $(OBJS)

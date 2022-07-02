@@ -72,15 +72,17 @@ void    ft_sort_2(t_info **a, t_info **b, int size)
     if (size == 5)
         {
             ft_put_top_a(a, i, size);
+            // printf("B ");
             ft_push(b, a, "pb");
         }
     ft_sort_1(a);
     if (size == 5)
     {
         ft_push(a, b, "pa");
+        // printf ("l7a\n");
         ft_push(a, b, "pa");
     }
-    else if (size == 4)
+    if (size == 4)
         ft_push(a, b, "pa");
     else if (size == 2)
         ft_sort_0(a);
