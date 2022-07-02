@@ -117,7 +117,7 @@ SORT_1.c
     if (A == not sorted)
     {
         ft_push(A, B);
-        if (A.num > A.Next.num)
+        if (A.num > A.next.num)
             ft_rotate(*A);
         ft_push(B, A);
         if (A.num > A.)
