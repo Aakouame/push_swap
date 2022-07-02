@@ -6,26 +6,26 @@
 /*   By: akouame <akouame@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:27:57 by akouame           #+#    #+#             */
-/*   Updated: 2022/07/02 14:45:29 by akouame          ###   ########.fr       */
+/*   Updated: 2022/07/02 15:51:02 by akouame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int ft_check_dig(char *str)
+int	ft_check_dig(char *str)
 {
-	int i;
-	int j;
-	// rad lbal hna ( wesh ghadi i attar return 0 hna wla la!)
+	int	i;
+	int	j;
+
 	if (!str)
-		return(0);
+		return (0);
 	i = 0;
 	j = 0;
-	if(str[i] == '-' || str[i] == '+')
+	if (str[i] == '-' || str[i] == '+')
 		i++;
 	while (str[i])
 	{
-		if(ft_isdigit(str[i]) == 0)
+		if (ft_isdigit(str[i]) == 0)
 			return (0);
 		i++;
 		j++;
@@ -39,11 +39,11 @@ int ft_check_dig(char *str)
 	return (1);
 }
 
-int ft_check_rep(char *dst)
+int	ft_check_rep(char *dst)
 {
-	char    **str;
-	int     i;
-	int     j;
+	char	**str;
+	int		i;
+	int		j;
 
 	i = 0;
 	str = NULL;
@@ -66,11 +66,12 @@ int ft_check_rep(char *dst)
 	}
 	return (1);
 }
-int ft_check_car(char **str)
+
+int	ft_check_car(char **str)
 {
-	size_t  i;
-	size_t  j;
-	size_t  cpt;
+	size_t	i;
+	size_t	j;
+	size_t	cpt;
 
 	i = 0;
 	cpt = 0;
@@ -79,7 +80,7 @@ int ft_check_car(char **str)
 		j = 0;
 		while (str[i][j] == ' ')
 			j++;
-		if(j == ft_strlen(str[i]))
+		if (j == ft_strlen(str[i]))
 			cpt++;
 		i++;
 	}
@@ -88,47 +89,26 @@ int ft_check_car(char **str)
 	return (0);
 }
 
-int ft_chck(char **argv)
+int	ft_chck(char **argv)
 {
-	int     i;
-	char    *dst;
-	char    **split;
-	int     j;
-	int     size;
+	char	*dst;
+	char	**split;
+	int		size;
 
 	dst = NULL;
 	split = NULL;
-	i = 1;
 	size = 0;
 	if (ft_check_car(argv))
 		return (0);
-	while (argv[i])
-	{
-		split = ft_split(argv[i], ' ');
-		j = 0;
-		if (split[0] == NULL)
-			return (0);
-		while(split[j])
-		{
-			if (ft_check_dig(split[j]) == 0)
-				return (0);
-			dst = ft_strjoin(dst, split[j]);
-			j++;
-			size++;
-		}
-		free(split);
-		i++;
-	}
-	if (!ft_check_rep(dst))
-		return (0);
-	return(size);
+	size = ft_check_size(argv, split, dst, size);
+	return (size);
 }
 
-void    ft_put_top_b(t_info **a, int i, int size)
+void	ft_put_top_b(t_info **a, int i, int size)
 {
 	if (i == 1)
 		ft_swap(a, "sb");
-	else if ((size - i) <= (size / 2)) // kant size - i <= size/2
+	else if ((size - i) <= (size / 2))
 	{
 		while ((i) < size)
 		{
@@ -137,9 +117,11 @@ void    ft_put_top_b(t_info **a, int i, int size)
 		}
 	}
 	else
+	{
 		while (i != 0)
 		{
 			ft_rotate(a, "rb");
 			i--;
 		}
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: akouame <akouame@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:28:31 by akouame           #+#    #+#             */
-/*   Updated: 2022/07/02 14:56:52 by akouame          ###   ########.fr       */
+/*   Updated: 2022/07/02 16:24:29 by akouame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,11 @@ void	ft_delete_indix(t_info **a, int indix);
 int		ft_val_indice(t_info *tmp, int indice);
 void	ft_sort_4(t_info **a, t_info **b);
 int		ft_check_sort(t_info *a);
-void	ft_display(t_info *a, char *str);
 t_info	*ft_duplicate(t_info *a);
+int		ft_check_size(char **argv, char **split, char *dst, int size);
+int		ft_check_rep(char *dst);
+int		ft_check_dig(char *str);
+void	ft_help_s_2(int size, t_info **a, t_info **b, int i);
+void	ft_help_s_4(t_info	**a, t_info **b, t_info **tmp, int first[2]);
 
 #endif

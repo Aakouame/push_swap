@@ -12,7 +12,7 @@ SRCS = push_swap.c\
 		sort_2.c\
 		sort_3.c\
 		sort_4.c\
-
+		push_outils.c\
 
 OBJS = push_swap.o\
 		push_check.o\
@@ -24,6 +24,7 @@ OBJS = push_swap.o\
 		sort_2.o\
 		sort_3.o\
 		sort_4.o\
+		push_outils.o\
 
 LIBFT = ./libft/libft.a
 PATH_LIBFT = ./libft

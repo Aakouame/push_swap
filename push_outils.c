@@ -1,55 +1,60 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_add.c                                         :+:      :+:    :+:   */
+/*   push_outils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akouame <akouame@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/02 14:28:10 by akouame           #+#    #+#             */
-/*   Updated: 2022/07/02 15:41:28 by akouame          ###   ########.fr       */
+/*   Created: 2022/07/02 15:36:45 by akouame           #+#    #+#             */
+/*   Updated: 2022/07/02 16:30:38 by akouame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-char	*ft_put_str(char **argv)
+int	ft_check_size(char **argv, char **split, char *dst, int size)
 {
-	int		i;
-	char	*dst;
-	char	**split;
-	int		j;
+	int	i;
+	int	j;
 
-	dst = NULL;
-	split = NULL;
 	i = 1;
 	while (argv[i])
 	{
 		split = ft_split(argv[i], ' ');
 		j = 0;
+		if (split[0] == NULL)
+			return (0);
 		while (split[j])
 		{
+			if (ft_check_dig(split[j]) == 0)
+				return (0);
 			dst = ft_strjoin(dst, split[j]);
 			j++;
+			size++;
 		}
 		free(split);
 		i++;
 	}
-	return (dst);
+	if (!ft_check_rep(dst))
+		return (0);
+	return (size);
 }
 
-t_info	*ft_add(t_info **head, char **argv, int size)
+void	ft_help_s_2(int size, t_info **a, t_info **b, int i)
 {
-	char	*str;
-	int		i;
-	char	**split;
-
-	i = 0;
-	str = ft_put_str(argv);
-	split = ft_split(str, ' ');
-	while (i < size)
+	if (size == 5)
 	{
-		*head = ft_add_bot(head, create_node(ft_atoi(split[i])));
-		i++;
+		ft_put_top_a(a, i, size);
+		ft_push(b, a, "pb");
 	}
-	return (*head);
+	ft_sort_1(a);
+	if (size == 5)
+	{
+		ft_push(a, b, "pa");
+		ft_push(a, b, "pa");
+	}
+	if (size == 4)
+		ft_push(a, b, "pa");
+	else if (size == 2)
+		ft_sort_0(a);
 }

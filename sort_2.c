@@ -6,7 +6,7 @@
 /*   By: akouame <akouame@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:27:53 by akouame           #+#    #+#             */
-/*   Updated: 2022/07/02 15:24:17 by akouame          ###   ########.fr       */
+/*   Updated: 2022/07/02 15:58:37 by akouame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,21 +79,7 @@ void	ft_sort_2(t_info **a, t_info **b, int size)
 	}
 	min = ft_smallest(*a);
 	i = ft_indice(*a, min);
-	if (size == 5)
-	{
-		ft_put_top_a(a, i, size);
-		ft_push(b, a, "pb");
-	}
-	ft_sort_1(a);
-	if (size == 5)
-	{
-		ft_push(a, b, "pa");
-		ft_push(a, b, "pa");
-	}
-	if (size == 4)
-		ft_push(a, b, "pa");
-	else if (size == 2)
-		ft_sort_0(a);
+	ft_help_s_2(size, a, b, i);
 }
 
 void	ft_put_top_tmp(t_info **a, int i, int size)
