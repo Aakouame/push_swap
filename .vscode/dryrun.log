@@ -1,8 +1,0 @@
-make --dry-run --keep-going --print-directory
-make: Entering directory `/Users/akouame/Desktop/PUSH_SWAP_GIT'
-CC -Wall -Wextra -Werror   -c -o push_list.o push_list.c
- 
-CC -Wall -Wextra -Werror   -c -o push_outils.o push_outils.c
-CC -Wall -Wextra -Werror push_swap.o push_check.o push_add.o push_list.o push_operations.o swap.o sort_1.o sort_2.o sort_3.o sort_4.o push_outils.o  ./libft/libft.a -o push_swap 
-make: Leaving directory `/Users/akouame/Desktop/PUSH_SWAP_GIT'
- 
