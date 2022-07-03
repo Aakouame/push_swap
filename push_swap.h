@@ -6,7 +6,7 @@
 /*   By: akouame <akouame@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:28:31 by akouame           #+#    #+#             */
-/*   Updated: 2022/07/02 16:24:29 by akouame          ###   ########.fr       */
+/*   Updated: 2022/07/03 16:58:41 by akouame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,7 @@ int		ft_check_rep(char *dst);
 int		ft_check_dig(char *str);
 void	ft_help_s_2(int size, t_info **a, t_info **b, int i);
 void	ft_help_s_4(t_info	**a, t_info **b, t_info **tmp, int first[2]);
+void	ft_fre(char **tp);
+void	ft_delete_stack(t_info *a);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: akouame <akouame@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:27:57 by akouame           #+#    #+#             */
-/*   Updated: 2022/07/02 15:51:02 by akouame          ###   ########.fr       */
+/*   Updated: 2022/07/03 15:53:23 by akouame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ int	ft_check_rep(char *dst)
 		}
 		i++;
 	}
+	ft_fre(str);
 	return (1);
 }
 
@@ -101,6 +102,8 @@ int	ft_chck(char **argv)
 	if (ft_check_car(argv))
 		return (0);
 	size = ft_check_size(argv, split, dst, size);
+	free(split);
+	free(dst);
 	return (size);
 }
 

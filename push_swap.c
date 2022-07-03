@@ -6,7 +6,7 @@
 /*   By: akouame <akouame@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:26:58 by akouame           #+#    #+#             */
-/*   Updated: 2022/07/02 14:47:29 by akouame          ###   ########.fr       */
+/*   Updated: 2022/07/03 17:05:18 by akouame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	main(int argc, char **argv)
 	int		i;
 
 	i = 0;
+	a = NULL;
 	if (argc > 1)
 	{
 		size = ft_chck(argv);
@@ -35,5 +36,6 @@ int	main(int argc, char **argv)
 		else
 			ft_putstr_fd("error ", 1);
 	}
+	ft_delete_stack(a);
 	return (0);
 }

@@ -1,6 +1,5 @@
 CC = CC
 CFLAGS = -Wall -Wextra -Werror
-SERVER = server
 NAME = push_swap
 SRCS = push_swap.c\
 		push_check.c\
