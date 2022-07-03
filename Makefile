@@ -1,6 +1,7 @@
-CC = CC
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 NAME = push_swap
+BONUS = checker
 SRCS = push_swap.c\
 		push_check.c\
 		push_add.c\
@@ -12,6 +13,11 @@ SRCS = push_swap.c\
 		sort_3.c\
 		sort_4.c\
 		push_outils.c\
+
+SRCS_BONUS = checker.c\
+				help.c\
+				get_next_line.c\
+				get_next_line_utils.c\
 
 OBJS = push_swap.o\
 		push_check.o\
@@ -25,6 +31,11 @@ OBJS = push_swap.o\
 		sort_4.o\
 		push_outils.o\
 
+OBJS_BONUS = checker.o\
+				help.o\
+				get_next_line.o\
+				get_next_line_utils.o\
+
 LIBFT = ./libft/libft.a
 PATH_LIBFT = ./libft
 
@@ -36,14 +47,17 @@ $(LIBFT): ${PATH_LIBFT}
 $(NAME): $(OBJS) $(LIBFT)
 	$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME) 
 
+bonus: $(OBJS) $(LIBFT) $(OBJS_BONUS)
+	$(CC) $(CFLAGS)  $(filter-out push_swap.o, $(OBJS)) $(OBJS_BONUS) $(LIBFT) -o $(BONUS)
+
 clean:
-	rm -f $(OBJS)
+	rm -f *.o
 	make clean -C ${PATH_LIBFT}
 
 fclean: clean
-	$(RM) $(NAME)
+	rm -rf $(NAME) $(BONUS)
 	make fclean -C ${PATH_LIBFT}
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus

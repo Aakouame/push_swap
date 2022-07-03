@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: akouame <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: akouame <akouame@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/06 12:40:23 by akouame           #+#    #+#              #
-#    Updated: 2021/12/01 15:44:43 by akouame          ###   ########.fr        #
+#    Updated: 2022/07/03 22:06:21 by akouame          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 SRCS = ft_atoi.c\
 	   ft_isascii.c\

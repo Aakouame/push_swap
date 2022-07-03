@@ -1,41 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akouame <akouame@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/02 14:26:58 by akouame           #+#    #+#             */
-/*   Updated: 2022/07/03 19:51:53 by akouame          ###   ########.fr       */
+/*   Created: 2021/12/26 17:18:47 by akouame           #+#    #+#             */
+/*   Updated: 2022/07/03 21:10:43 by akouame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
+# define BUFFER_SIZE 1
+# include <stdlib.h>
+# include <unistd.h>
 
-int	main(int argc, char **argv)
-{
-	t_info	*a;
-	t_info	*b;
-	int		size;
-	int		i;
+char	*get_next_line(int fd);
+char	*ft_substrs(char *s, unsigned int start, size_t len);
+size_t	ft_strlens(const char *s);
+char	*ft_strjoins(char *s1, char *s2);
+char	*ft_strdups(char *s1);
+char	*ft_frees(char **str);
 
-	i = 0;
-	a = NULL;
-	if (argc > 1)
-	{
-		size = ft_chck(argv);
-		if (size >= 1)
-		{
-			a = ft_add(&a, argv, size);
-			b = NULL;
-			if (size <= 5)
-				ft_sort_2(&a, &b, size);
-			else if (size > 5)
-				ft_sort_4(&a, &b);
-		}
-		else
-			ft_putstr_fd("Error ", 1);
-	}
-	ft_delete_stack(a);
-	return (0);
-}
+#endif

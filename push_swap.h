@@ -6,7 +6,7 @@
 /*   By: akouame <akouame@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:28:31 by akouame           #+#    #+#             */
-/*   Updated: 2022/07/03 16:58:41 by akouame          ###   ########.fr       */
+/*   Updated: 2022/07/03 21:31:16 by akouame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include "libft/libft.h"
 # include <limits.h>
+# include "get_next_line.h"
 
 typedef struct t_info{
 	int				num;
@@ -60,5 +61,7 @@ void	ft_help_s_2(int size, t_info **a, t_info **b, int i);
 void	ft_help_s_4(t_info	**a, t_info **b, t_info **tmp, int first[2]);
 void	ft_fre(char **tp);
 void	ft_delete_stack(t_info *a);
+void	ft_rev_rr_1(t_info **a, t_info **b);
+void	ft_rr_1(t_info **a, t_info **b);
 
 #endif
