@@ -6,7 +6,7 @@
 /*   By: akouame <akouame@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:28:31 by akouame           #+#    #+#             */
-/*   Updated: 2022/07/03 21:31:16 by akouame          ###   ########.fr       */
+/*   Updated: 2022/07/03 22:37:14 by akouame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,6 @@ void	ft_fre(char **tp);
 void	ft_delete_stack(t_info *a);
 void	ft_rev_rr_1(t_info **a, t_info **b);
 void	ft_rr_1(t_info **a, t_info **b);
+void	ft_ss_1(t_info **a, t_info **b);
 
 #endif

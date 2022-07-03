@@ -6,7 +6,7 @@
 /*   By: akouame <akouame@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:27:07 by akouame           #+#    #+#             */
-/*   Updated: 2022/07/03 14:14:56 by akouame          ###   ########.fr       */
+/*   Updated: 2022/07/03 22:33:16 by akouame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_push(t_info **a, t_info **b, char *str)
 	int		tmpb;
 
 	iter = *b;
-	if (!b)
+	if (!(*b))
 		return ;
 	tmpb = (*b)->num;
 	if (*a)
@@ -40,7 +40,7 @@ void	ft_rotate(t_info **a, char *str)
 {
 	int	tmp;
 
-	if ((*a)->next == NULL || !(*a))
+	if (!(*a) || (*a)->next == NULL)
 		return ;
 	tmp = (*a)->num;
 	ft_delete_t(a);
@@ -57,10 +57,6 @@ void	ft_rr(t_info **a, t_info **b)
 		ft_rotate(b, "");
 		ft_putstr_fd("rr\n", 1);
 	}
-	else if ((*a)->next != NULL && (*b)->next == NULL)
-		ft_rotate(a, "ra");
-	else if ((*a)->next == NULL && (*b)->next != NULL)
-		ft_rotate(b, "rb");
 }
 
 void	ft_rev_rotate(t_info **a, char *str)
@@ -68,7 +64,7 @@ void	ft_rev_rotate(t_info **a, char *str)
 	int		n;
 	t_info	*tmp;
 
-	if ((*a)->next == NULL || !(*a))
+	if (!(*a) || (*a)->next == NULL)
 		return ;
 	tmp = *a;
 	while (tmp->next != NULL)

@@ -44,9 +44,9 @@ void	ft_operations(t_info **a, t_info **b, char *str)
 	if (!ft_strncmp("sa\n", str))
 		ft_swap(a, "");
 	else if (!ft_strncmp("sb\n", str))
-		ft_swap(b, "sb");
+		ft_swap(b, "");
 	else if (!ft_strncmp("ss\n", str))
-		ft_ss(a, b);
+		ft_ss_1(a, b);
 	else if (!ft_strncmp("pa\n", str))
 		ft_push(a, b, "");
 	else if (!ft_strncmp("pb\n", str))
