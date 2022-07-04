@@ -6,7 +6,7 @@
 /*   By: akouame <akouame@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:27:47 by akouame           #+#    #+#             */
-/*   Updated: 2022/07/02 15:10:58 by akouame          ###   ########.fr       */
+/*   Updated: 2022/07/04 20:30:20 by akouame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	ft_check_sort(t_info *a)
 {
-	int	nb;
+	t_info	*h;
 
-	nb = a->num;
-	while (a != NULL)
+	h = a;
+	while (h->next != NULL)
 	{
-		if (nb > a->num)
+		if (h->num > h->next->num)
 			return (1);
-		a = a->next;
+		h = h->next;
 	}
 	return (0);
 }

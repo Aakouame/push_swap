@@ -6,7 +6,7 @@
 /*   By: akouame <akouame@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:28:47 by akouame           #+#    #+#             */
-/*   Updated: 2022/07/03 22:45:10 by akouame          ###   ########.fr       */
+/*   Updated: 2022/07/04 20:53:30 by akouame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_swap(t_info **a, char *str)
 {
 	int	tmp1;
 
-	if (!(*a))
+	if (!(*a) || !((*a)->next))
 		return ;
 	tmp1 = (*a)->num;
 	(*a)->num = (*a)->next->num;
@@ -27,7 +27,7 @@ void	ft_swap(t_info **a, char *str)
 
 void	ft_ss(t_info **a, t_info **b)
 {
-	if (!(*a) || !(*b))
+	if (!(*a) || !(*b) || !((*b)->next) || !((*a)->next))
 		return ;
 	ft_swap(a, "");
 	ft_swap(b, "");

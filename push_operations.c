@@ -6,7 +6,7 @@
 /*   By: akouame <akouame@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:27:07 by akouame           #+#    #+#             */
-/*   Updated: 2022/07/03 22:33:16 by akouame          ###   ########.fr       */
+/*   Updated: 2022/07/04 20:42:20 by akouame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,8 +84,4 @@ void	ft_rev_rr(t_info **a, t_info **b)
 		ft_rev_rotate(b, "");
 		ft_putendl_fd("rrr", 1);
 	}
-	else if ((*a)->next != NULL && (*b)->next == NULL)
-		ft_rev_rotate(a, "rra");
-	else if ((*a)->next == NULL && (*b)->next != NULL)
-		ft_rev_rotate(b, "rrb");
 }

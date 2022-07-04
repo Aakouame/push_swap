@@ -48,7 +48,7 @@ $(NAME): $(OBJS) $(LIBFT)
 	$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME) 
 
 bonus: $(OBJS) $(LIBFT) $(OBJS_BONUS)
-#	$(CC) $(CFLAGS)  $(filter-out push_swap.o, $(OBJS)) $(OBJS_BONUS) $(LIBFT) -o $(BONUS)
+	$(CC) $(CFLAGS)  $(filter-out push_swap.o, $(OBJS)) $(OBJS_BONUS) $(LIBFT) -o $(BONUS)
 
 clean:
 	rm -f *.o

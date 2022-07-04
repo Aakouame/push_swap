@@ -6,7 +6,7 @@
 /*   By: akouame <akouame@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:28:40 by akouame           #+#    #+#             */
-/*   Updated: 2022/07/03 17:08:03 by akouame          ###   ########.fr       */
+/*   Updated: 2022/07/04 20:53:15 by akouame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ void	ft_sort_4(t_info **a, t_info **b)
 	int		first[2];
 
 	tmp = ft_duplicate(*a);
+	if (ft_check_sort(*a) == 0)
+		return ;
 	ft_sorting(&tmp);
 	while ((*a)->next != NULL)
 	{
