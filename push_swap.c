@@ -6,7 +6,7 @@
 /*   By: akouame <akouame@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:26:58 by akouame           #+#    #+#             */
-/*   Updated: 2022/07/04 20:19:39 by akouame          ###   ########.fr       */
+/*   Updated: 2022/08/08 16:36:10 by akouame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	main(int argc, char **argv)
 				ft_sort_4(&a, &b);
 		}
 		else
-			ft_putstr_fd("Error ", 1);
+			ft_putstr_fd("Error", 1);
 	}
 	ft_delete_stack(a);
 	return (0);

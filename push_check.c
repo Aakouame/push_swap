@@ -6,7 +6,7 @@
 /*   By: akouame <akouame@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:27:57 by akouame           #+#    #+#             */
-/*   Updated: 2022/07/03 15:53:23 by akouame          ###   ########.fr       */
+/*   Updated: 2022/08/08 16:35:08 by akouame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_check_dig(char *str)
 		return (0);
 	i = 0;
 	j = 0;
-	if (str[i] == '-' || str[i] == '+')
+	if ((str[i] == '-' || str[i] == '+') && ft_isdigit(str[i + 1]))
 		i++;
 	while (str[i])
 	{

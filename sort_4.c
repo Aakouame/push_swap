@@ -6,7 +6,7 @@
 /*   By: akouame <akouame@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:28:40 by akouame           #+#    #+#             */
-/*   Updated: 2022/07/04 20:53:15 by akouame          ###   ########.fr       */
+/*   Updated: 2022/08/08 16:42:15 by akouame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	ft_help_s_4(t_info	**a, t_info **b, t_info **tmp, int first[2])
 	second[1] = ft_val_indice(*tmp, second[0]);
 	while (pbc <= (first[0]))
 	{
-		if ((*a)->num <= (first[1] +1))
+		if ((*a)->num <= (first[1]))
 		{
 			indix = ft_indice(*tmp, (*a)->num);
 			ft_delete_indix(tmp, indix);
